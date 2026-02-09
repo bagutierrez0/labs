@@ -1,0 +1,15 @@
+name: Test self-hosted runner
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - run: |
+          echo "Runner hostname:"
+          hostname
+          echo "Whoami:"
+          whoami
