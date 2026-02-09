@@ -9,7 +9,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: |
-          echo "Runner hostname:"
-          hostname
-          echo "Whoami:"
-          whoami
+          cd /home/vagrant/test
+          git fetch origin
+          git reset --hard origin/main
